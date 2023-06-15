@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "textview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kenmueller/TextView",
+      "state" : {
+        "branch" : "master",
+        "revision" : "06e6939ae4da03565889928cca65647f05fd2d67"
+      }
+    }
+  ],
+  "version" : 2
+}
