@@ -10,11 +10,13 @@ import SwiftUI
 enum Setting: CaseIterable {
     case calendars
     case urlScheme
+    case times
     
     var title: String {
         switch self {
         case .calendars: return "Calendars"
         case .urlScheme: return "URL Scheme"
+        case .times: return "Times"
         }
     }
     
@@ -22,6 +24,7 @@ enum Setting: CaseIterable {
         switch self {
         case .calendars: return CalendarSettingsView()
         case .urlScheme: return URLSchemeSettingsView()
+        case .times: return TimeSettingsView()
         }
     }
 }

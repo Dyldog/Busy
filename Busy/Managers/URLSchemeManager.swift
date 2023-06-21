@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import DylKit
 
 class URLSchemeManager {
-    @UserDefaultable(key: .urlScheme) var urlScheme: String = "x-fantastical3://parse?start=$DATE&end=$DATE+1&" + "x-success=busy://&x-source=Busy&x-error=busy://".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    enum Defaults: String, CaseIterable, DefaultsKey {
+        case urlScheme = "URL_SCHEME"
+    }
+
+    @UserDefaultable(key: Defaults.urlScheme) var urlScheme: String = "x-fantastical3://parse?start=$DATE&end=$DATE+1&" + "x-success=busy://&x-source=Busy&x-error=busy://".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     
     let dateRegex = try! NSRegularExpression(pattern: "\\$DATE(\\+\\d+)?")
     let dateFormatter: DateFormatter = {
@@ -17,13 +22,13 @@ class URLSchemeManager {
         return formatter
     }()
     
-    func url(for period: DayPeriod, of date: Date) -> URL? {
+    func url(for date: Date, startingAt startTime: (hour: Int, minute: Int)) -> URL? {
         var schemeText = urlScheme
         
         while let match = dateRegex.firstMatch(in: schemeText, range: .init(location: 0, length: schemeText.count))?.range {
             
             var dateValue = Calendar.autoupdatingCurrent
-                .date(bySettingHour: period.startHour, minute: 0, second: 0, of: date)!
+                .date(bySettingHour: startTime.hour, minute: startTime.minute, second: 0, of: date)!
             
             
             if let dateOffset = schemeText[Range(match, in: schemeText)!].components(separatedBy: "+").dropFirst().first?.doubleValue {

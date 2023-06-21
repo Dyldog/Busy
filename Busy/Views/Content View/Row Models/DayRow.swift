@@ -12,14 +12,6 @@ enum DayPeriod {
     case day
     case night
     case wholeDay
-    
-    var startHour: Int {
-        switch self {
-        case .day: return 9
-        case .night: return 12 + 5
-        case .wholeDay: return 12
-        }
-    }
 }
 
 struct DayRow: Identifiable {

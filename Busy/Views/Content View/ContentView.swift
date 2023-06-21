@@ -57,6 +57,9 @@ struct ContentView: View {
         }).sheet(isPresented: $viewModel.showSettings) {
             SettingsView()
         }
+        .alert(item: $viewModel.error) { message in
+            Alert(title: Text("Error"), message: Text(message))
+        }
     }
 }
 

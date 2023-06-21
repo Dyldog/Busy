@@ -25,7 +25,7 @@ class ContentViewModel: ObservableObject {
     
     @Published var colorOffset: Int = 0
     @Published var showSettings: Bool = false
-
+    @Published var error: String? = nil
     
     init() {
         eventManager.requestAccess { result in }
@@ -51,7 +51,7 @@ class ContentViewModel: ObservableObject {
         case 1:
             return "\(day.name) next week"
         default:
-            return "\(day.name) in \(weeksAway) weeks"
+            return "\(weeksAway) weeks from \(day.name)"
         }
     }
     
@@ -85,9 +85,16 @@ class ContentViewModel: ObservableObject {
                         startTime: self.timeFormatter.string(from: event.start)
                     )
             }, onSelect: { [weak self] period in
-                guard let url = self?.schemeManager.url(for: period, of: date) else { return } // TODO: Handle nil URL
+                guard
+                    let self = self,
+                    let url = self.schemeManager.url(for: date, startingAt: self.eventManager.startTime(for: period))
+                else { return } // TODO: Handle nil URL
                 
-                UIApplication.shared.open(url)
+                UIApplication.shared.open(url) { success in
+                    if !success {
+                        self.error = "Could not open URL:\n\(url.absoluteString)"
+                    }
+                }
             }
         )
     }
