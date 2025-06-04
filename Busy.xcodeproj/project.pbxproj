@@ -73,7 +73,6 @@
 		114CC2C02A3ABBCE00620701 /* String+IntValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IntValue.swift"; sourceTree = "<group>"; };
 		114CC2C22A3ABDCB00620701 /* PlainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainButton.swift; sourceTree = "<group>"; };
 		114CC2C42A3AC4E400620701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		116DA1882A430688006F520D /* DylKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DylKit; path = ../DylKit; sourceTree = "<group>"; };
 		116DA18C2A430774006F520D /* TimesSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesSettingView.swift; sourceTree = "<group>"; };
 		116DA18E2A430F7E006F520D /* String+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Padding.swift"; sourceTree = "<group>"; };
 		116DA1902A4314A7006F520D /* String+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Identifiable.swift"; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		11C8239B2A39865400F19C28 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		11C8239E2A39907500F19C28 /* CalendarSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSettingsView.swift; sourceTree = "<group>"; };
 		11C823A02A39950C00F19C28 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		FC89E0442ABD18FA00FDE91C /* DylKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DylKit; path = ../DylKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 		116DA1872A430688006F520D /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				116DA1882A430688006F520D /* DylKit */,
+				FC89E0442ABD18FA00FDE91C /* DylKit */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
