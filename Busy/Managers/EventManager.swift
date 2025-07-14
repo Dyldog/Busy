@@ -16,6 +16,8 @@ enum EventManagerError: Error {
 
 class EventManager {
     enum Defaults: String, DefaultsKey {
+        var store: DefaultsStore { UserDefaults.standard }
+        
         case morningEventTime = "MORNING_TIME"
         case eveningEventTime = "EVENING_TIME"
         case wholeDayEventTime = "WHOLE_DAY_TIME"

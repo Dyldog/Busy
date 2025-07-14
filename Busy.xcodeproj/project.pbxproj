@@ -44,6 +44,7 @@
 		11C8239C2A39865400F19C28 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8239B2A39865400F19C28 /* TimeInterval+Extensions.swift */; };
 		11C8239F2A39907500F19C28 /* CalendarSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8239E2A39907500F19C28 /* CalendarSettingsView.swift */; };
 		11C823A12A39950C00F19C28 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C823A02A39950C00F19C28 /* CheckboxStyle.swift */; };
+		FCCA8AC12E250BBC009F836A /* DylKit in Frameworks */ = {isa = PBXBuildFile; productRef = FCCA8AC02E250BBC009F836A /* DylKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +104,6 @@
 		11C8239B2A39865400F19C28 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		11C8239E2A39907500F19C28 /* CalendarSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSettingsView.swift; sourceTree = "<group>"; };
 		11C823A02A39950C00F19C28 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
-		FC89E0442ABD18FA00FDE91C /* DylKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DylKit; path = ../DylKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +113,7 @@
 			files = (
 				114CC2BB2A3AB35400620701 /* TextView in Frameworks */,
 				116DA18B2A430696006F520D /* DylKit in Frameworks */,
+				FCCA8AC12E250BBC009F836A /* DylKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,14 +134,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		116DA1872A430688006F520D /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				FC89E0442ABD18FA00FDE91C /* DylKit */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		116DA1892A430696006F520D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +144,6 @@
 		11AFF6D22A395FB700474E67 = {
 			isa = PBXGroup;
 			children = (
-				116DA1872A430688006F520D /* Packages */,
 				11AFF6DD2A395FB700474E67 /* Busy */,
 				11AFF6EE2A395FBA00474E67 /* BusyTests */,
 				11AFF6F82A395FBA00474E67 /* BusyUITests */,
@@ -310,6 +302,7 @@
 			packageProductDependencies = (
 				114CC2BA2A3AB35400620701 /* TextView */,
 				116DA18A2A430696006F520D /* DylKit */,
+				FCCA8AC02E250BBC009F836A /* DylKit */,
 			);
 			productName = Busy;
 			productReference = 11AFF6DB2A395FB700474E67 /* Busy.app */;
@@ -385,6 +378,7 @@
 			mainGroup = 11AFF6D22A395FB700474E67;
 			packageReferences = (
 				114CC2B92A3AB35400620701 /* XCRemoteSwiftPackageReference "TextView" */,
+				FCCA8ABF2E250BBB009F836A /* XCRemoteSwiftPackageReference "DylKit" */,
 			);
 			productRefGroup = 11AFF6DC2A395FB700474E67 /* Products */;
 			projectDirPath = "";
@@ -798,6 +792,14 @@
 				kind = branch;
 			};
 		};
+		FCCA8ABF2E250BBB009F836A /* XCRemoteSwiftPackageReference "DylKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Dyldog/DylKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -808,6 +810,11 @@
 		};
 		116DA18A2A430696006F520D /* DylKit */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = DylKit;
+		};
+		FCCA8AC02E250BBC009F836A /* DylKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCCA8ABF2E250BBB009F836A /* XCRemoteSwiftPackageReference "DylKit" */;
 			productName = DylKit;
 		};
 /* End XCSwiftPackageProductDependency section */

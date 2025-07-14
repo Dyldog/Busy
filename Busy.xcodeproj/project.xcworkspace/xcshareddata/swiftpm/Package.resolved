@@ -1,6 +1,33 @@
 {
   "pins" : [
     {
+      "identity" : "dylkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Dyldog/DylKit",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ad8a780dd134224efc04682744e903b8d3e7c2b0"
+      }
+    },
+    {
+      "identity" : "highlightedtexteditor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Dyldog/HighlightedTextEditor",
+      "state" : {
+        "branch" : "main",
+        "revision" : "053cfdf6713596c2895bfbe4fc4a03f087e2e96f"
+      }
+    },
+    {
+      "identity" : "swiftsoup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scinfu/SwiftSoup.git",
+      "state" : {
+        "revision" : "d1d6add8f277bd76992a0f7e72961a896609b707",
+        "version" : "2.9.5"
+      }
+    },
+    {
       "identity" : "textview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kenmueller/TextView",

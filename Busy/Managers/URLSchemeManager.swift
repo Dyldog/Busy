@@ -11,6 +11,8 @@ import DylKit
 class URLSchemeManager {
     enum Defaults: String, CaseIterable, DefaultsKey {
         case urlScheme = "URL_SCHEME"
+        
+        var store: DylKit.DefaultsStore { UserDefaults.standard }
     }
 
     @UserDefaultable(key: Defaults.urlScheme) var urlScheme: String = "x-fantastical3://parse?start=$DATE&end=$DATE+1&" + "x-success=busy://&x-source=Busy&x-error=busy://".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
